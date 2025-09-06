@@ -1,6 +1,6 @@
 function validar() {
-  const usuario = document.getElementById("usuario").value;
-  const clave = document.getElementById("clave").value;
+  const usuario = document.getElementById("usuario").value.trim();
+  const clave = document.getElementById("clave").value.trim();
 
   if (usuario === "medioscastelli" && clave === "medios2025") {
     window.location.href = "https://elecciones.castelli.gob.ar/mesas.php";
