@@ -1,35 +1,55 @@
-function validarLogin() {
-  const usuario = document.getElementById('usuario').value.trim();
-  const clave = document.getElementById('clave').value.trim();
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso Institucional | Fuerza Patria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Encabezado único -->
+  <header id="encabezado">
+    <img src="desender.png" alt="Logo Fuerza Patria" class="logo">
+    <h1 id="tituloPrincipal">Ingreso Institucional</h1>
+  </header>
 
-  if (usuario === 'medioscastelli' && clave === 'medios2025') {
-    document.querySelector('.login-box').classList.add('hidden');
-    document.getElementById('accesoMedios').classList.remove('hidden');
-    document.getElementById('tituloPrincipal').textContent = 'Comando Electoral Fuerza Patria';
-  } else {
-    alert('Credenciales inválidas. Verificá usuario y clave.');
-  }
-}
+  <main>
+    <!-- Pantalla de login -->
+    <section class="login-box">
+      <h2>Ingreso Seguro</h2>
+      <input type="text" id="usuario" placeholder="Usuario">
+      <input type="password" id="clave" placeholder="Clave">
+      <button onclick="validarLogin()">Ingresar</button>
+      <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </section>
 
-function abrirVistaMesas() {
-  document.getElementById('vistaMesas').classList.remove('hidden');
-}
+    <!-- Panel de medios -->
+    <section id="accesoMedios" class="hidden">
+      <div class="caja-grande">
+        <p>Consulta directa al estado de mesas:</p>
+        <button onclick="abrirVistaMesas()">Acceder a % de mesa</button>
+        <button onclick="volver()">Cerrar sesión</button>
+      </div>
+    </section>
 
-function cerrarVistaMesas() {
-  document.getElementById('vistaMesas').classList.add('hidden');
-}
+    <!-- Vista embebida del padrón por mesa -->
+    <section id="vistaMesas" class="hidden">
+      <div class="caja-grande">
+        <h3 style="text-align:center;">Estado de % por mesa</h3>
+        <div class="recuadro-responsive">
+          <iframe src="https://elecciones.castelli.gob.ar/mesas.php" loading="lazy"></iframe>
+        </div>
+        <div style="text-align:center; margin-top:1rem;">
+          <button onclick="cerrarVistaMesas()">Volver</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-function volver() {
-  document.getElementById('accesoMedios').classList.add('hidden');
-  document.getElementById('vistaMesas').classList.add('hidden');
-  document.querySelector('.login-box').classList.remove('hidden');
-  document.getElementById('usuario').value = '';
-  document.getElementById('clave').value = '';
-  document.getElementById('tituloPrincipal').textContent = 'Ingreso Institucional';
-}
+  <footer>
+    <p>© Comando Electoral PJ Castelli · Memoria Democrática</p>
+  </footer>
 
-function cerrarSesion() {
-  document.getElementById('usuario').value = '';
-  document.getElementById('clave').value = '';
-  alert('Sesión cerrada. Gracias por defender Castelli con dignidad.');
-}
+  <script src="script.js"></script>
+</body>
+</html>
