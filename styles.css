@@ -1,77 +1,19 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #007BFF, #003366);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+function validar() {
+  const usuario = document.getElementById("usuario").value.trim();
+  const clave = document.getElementById("clave").value.trim();
+
+  if (usuario === "medioscastelli" && clave === "medios2025") {
+    document.getElementById("loginView").style.display = "none";
+    document.getElementById("mainView").style.display = "block";
+  } else {
+    document.getElementById("error").innerText = "Usuario o clave incorrectos.";
+  }
 }
 
-.container {
-  text-align: center;
-  padding: 20px;
-  width: 100%;
-  max-width: 500px;
-}
-
-.logo {
-  max-width: 160px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
-}
-
-input {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 80%;
-  max-width: 300px;
-  border: none;
-  border-radius: 5px;
-}
-
-button {
-  padding: 12px 30px;
-  background-color: white;
-  color: #003366;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-button.cerrar {
-  background-color: #ff4444;
-  color: white;
-  margin-bottom: 10px;
-}
-
-#error {
-  color: #ffcccc;
-  margin-top: 10px;
-}
-
-footer {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #cccccc;
-}
-
-.iframe-container {
-  border: 2px solid white;
-  border-radius: 10px;
-  overflow: hidden;
-  height: 400px;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-iframe {
-  width: 100%;
-  height: 100%;
+function cerrarSesion() {
+  document.getElementById("mainView").style.display = "none";
+  document.getElementById("loginView").style.display = "block";
+  document.getElementById("usuario").value = "";
+  document.getElementById("clave").value = "";
+  document.getElementById("error").innerText = "";
 }
