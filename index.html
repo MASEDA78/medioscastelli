@@ -18,13 +18,16 @@
     <footer>Comando Electoral PJ</footer>
   </div>
 
-  <!-- Vista de contenido -->
-  <div class="container" id="mainView" style="display: none;">
-    <button onclick="cerrarSesion()" class="cerrar">Cerrar sesión</button>
-    <div class="iframe-container">
+  <!-- Vista institucional post-login -->
+  <div class="main-panel" id="mainView" style="display: none;">
+    <header>
+      <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" alt="Logo Defender Castelli" class="logo-header" />
+      <div class="titulo">Comando Electoral PJ</div>
+      <button onclick="cerrarSesion()" class="cerrar">Cerrar sesión</button>
+    </header>
+    <div class="iframe-wrapper">
       <iframe src="https://elecciones.castelli.gob.ar/mesas.php" frameborder="0"></iframe>
     </div>
-    <footer>Comando Electoral PJ</footer>
   </div>
 
   <script src="script.js"></script>
