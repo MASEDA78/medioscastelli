@@ -3,14 +3,17 @@ body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #007BFF, #003366);
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
   text-align: center;
   padding: 20px;
-  max-width: 400px;
-  margin: auto;
-  margin-top: 10vh;
+  width: 100%;
+  max-width: 600px;
 }
 
 .logo {
@@ -18,6 +21,10 @@ body {
   margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+h2 {
+  margin-bottom: 20px;
 }
 
 input {
@@ -44,7 +51,7 @@ button {
 button.cerrar {
   background-color: #ff4444;
   color: white;
-  margin-left: auto;
+  margin-bottom: 20px;
 }
 
 #error {
@@ -53,44 +60,23 @@ button.cerrar {
 }
 
 footer {
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 14px;
   color: #cccccc;
 }
 
-/* Vista post-login */
-.main-panel {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #003366;
-  padding: 10px 20px;
-  color: white;
-}
-
-.logo-header {
-  max-height: 50px;
-}
-
-.titulo {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.iframe-wrapper {
-  flex-grow: 1;
-  padding: 10px;
+/* Caja iframe institucional */
+.iframe-box {
+  border: 2px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 500px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 iframe {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
-  border: 2px solid white;
 }
