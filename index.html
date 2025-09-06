@@ -19,15 +19,14 @@
   </div>
 
   <!-- Vista institucional post-login -->
-  <div class="main-panel" id="mainView" style="display: none;">
-    <header>
-      <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" alt="Logo Defender Castelli" class="logo-header" />
-      <div class="titulo">Comando Electoral PJ</div>
-      <button onclick="cerrarSesion()" class="cerrar">Cerrar sesión</button>
-    </header>
-    <div class="iframe-wrapper">
+  <div class="container" id="mainView" style="display: none;">
+    <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" alt="Logo Defender Castelli" class="logo" />
+    <h2>Comando Electoral PJ</h2>
+    <button onclick="cerrarSesion()" class="cerrar">Cerrar sesión</button>
+    <div class="iframe-box">
       <iframe src="https://elecciones.castelli.gob.ar/mesas.php" frameborder="0"></iframe>
     </div>
+    <footer>Comando Electoral PJ</footer>
   </div>
 
   <script src="script.js"></script>
