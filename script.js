@@ -3,7 +3,7 @@ function validar() {
   const clave = document.getElementById("clave").value.trim();
 
   if (usuario === "medioscastelli" && clave === "medios2025") {
-    window.location.href = "medios.html";
+    window.location.href = "inicio.html";
   } else {
     document.getElementById("error").innerText = "Usuario o clave incorrectos.";
   }
