@@ -4,7 +4,7 @@ function validar() {
 
   if (usuario === "medioscastelli" && clave === "medios2025") {
     document.getElementById("loginView").style.display = "none";
-    document.getElementById("mainView").style.display = "flex";
+    document.getElementById("mainView").style.display = "block";
   } else {
     document.getElementById("error").innerText = "Usuario o clave incorrectos.";
   }
