@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Vista de login -->
   <div class="container" id="loginView">
     <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" alt="Logo Defender Castelli" class="logo" />
     <h2>Acceso para medios</h2>
@@ -18,15 +17,17 @@
     <footer>Comando Electoral PJ</footer>
   </div>
 
-  <!-- Vista institucional post-login -->
-  <div class="container" id="mainView" style="display: none;">
-    <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" alt="Logo Defender Castelli" class="logo" />
-    <h2>Comando Electoral PJ</h2>
-    <button onclick="abrirMesas()" class="abrir">Habilitado para medios</button>
-    <button onclick="cerrarSesion()" class="cerrar">Volver</button>
-    <footer>Comando Electoral PJ</footer>
-  </div>
+  <script>
+    function validar() {
+      const usuario = document.getElementById("usuario").value.trim();
+      const clave = document.getElementById("clave").value.trim();
 
-  <script src="script.js"></script>
+      if (usuario === "medioscastelli" && clave === "medios2025") {
+        window.location.href = "medios.html";
+      } else {
+        document.getElementById("error").innerText = "Usuario o clave incorrectos.";
+      }
+    }
+  </script>
 </body>
 </html>
