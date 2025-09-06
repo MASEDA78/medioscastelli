@@ -27,16 +27,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-input {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 80%;
-  max-width: 300px;
-  border: none;
-  border-radius: 5px;
-}
-
 button {
   padding: 12px 30px;
   border: none;
@@ -44,15 +34,10 @@ button {
   font-weight: bold;
   cursor: pointer;
   margin-top: 20px;
-  background-color: white;
-  color: #003366;
-  max-width: 500px;
-  width: 100%;
-}
-
-button.cerrar {
   background-color: #ff4444;
   color: white;
+  max-width: 500px;
+  width: 100%;
 }
 
 footer {
@@ -74,8 +59,4 @@ footer {
 iframe {
   width: 100%;
   height: 100%;
-}
-
-.hidden {
-  display: none;
 }
