@@ -44,6 +44,11 @@ button {
   margin-top: 10px;
 }
 
+button.cerrar {
+  background-color: #ff4444;
+  color: white;
+}
+
 #error {
   color: #ffcccc;
   margin-top: 10px;
