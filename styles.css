@@ -48,10 +48,14 @@ button {
   margin-top: 10px;
 }
 
+button.abrir {
+  background-color: white;
+  color: #003366;
+}
+
 button.cerrar {
   background-color: #ff4444;
   color: white;
-  margin-bottom: 20px;
 }
 
 #error {
@@ -63,20 +67,4 @@ footer {
   margin-top: 30px;
   font-size: 14px;
   color: #cccccc;
-}
-
-/* Caja iframe institucional */
-.iframe-box {
-  border: 2px solid white;
-  border-radius: 10px;
-  overflow: hidden;
-  height: 500px;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-iframe {
-  width: 100%;
-  height: 100%;
 }
