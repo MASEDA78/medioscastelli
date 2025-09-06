@@ -1,26 +1,35 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comando Electoral PJ</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="container">
-    <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" class="logo" alt="Logo Defender Castelli" />
-    <h2>Comando Electoral PJ</h2>
-    <div class="iframe-box">
-      <iframe src="https://elecciones.castelli.gob.ar/mesas.php" frameborder="0"></iframe>
-    </div>
-    <button onclick="cerrarSesion()" class="cerrar">Cerrar sesión</button>
-    <footer>Comando Electoral PJ</footer>
-  </div>
+function validarLogin() {
+  const usuario = document.getElementById('usuario').value.trim();
+  const clave = document.getElementById('clave').value.trim();
 
-  <script>
-    function cerrarSesion() {
-      window.location.href = "index.html";
-    }
-  </script>
-</body>
-</html>
+  if (usuario === 'medioscastelli' && clave === 'medios2025') {
+    document.querySelector('.login-box').classList.add('hidden');
+    document.getElementById('accesoMedios').classList.remove('hidden');
+    document.getElementById('tituloPrincipal').textContent = 'Comando Electoral Fuerza Patria';
+  } else {
+    alert('Credenciales inválidas. Verificá usuario y clave.');
+  }
+}
+
+function abrirVistaMesas() {
+  document.getElementById('vistaMesas').classList.remove('hidden');
+}
+
+function cerrarVistaMesas() {
+  document.getElementById('vistaMesas').classList.add('hidden');
+}
+
+function volver() {
+  document.getElementById('accesoMedios').classList.add('hidden');
+  document.getElementById('vistaMesas').classList.add('hidden');
+  document.querySelector('.login-box').classList.remove('hidden');
+  document.getElementById('usuario').value = '';
+  document.getElementById('clave').value = '';
+  document.getElementById('tituloPrincipal').textContent = 'Ingreso Institucional';
+}
+
+function cerrarSesion() {
+  document.getElementById('usuario').value = '';
+  document.getElementById('clave').value = '';
+  alert('Sesión cerrada. Gracias por defender Castelli con dignidad.');
+}
