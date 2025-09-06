@@ -13,7 +13,7 @@ body {
   text-align: center;
   padding: 20px;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .logo {
@@ -39,8 +39,6 @@ input {
 
 button {
   padding: 12px 30px;
-  background-color: white;
-  color: #003366;
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -51,6 +49,9 @@ button {
 button.abrir {
   background-color: white;
   color: #003366;
+  width: 100%;
+  max-width: 500px;
+  font-size: 18px;
 }
 
 button.cerrar {
@@ -67,4 +68,15 @@ footer {
   margin-top: 30px;
   font-size: 14px;
   color: #cccccc;
+}
+
+/* Caja institucional */
+.box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
 }
