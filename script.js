@@ -10,6 +10,10 @@ function validar() {
   }
 }
 
+function abrirMesas() {
+  window.open("https://elecciones.castelli.gob.ar/mesas.php", "_blank");
+}
+
 function cerrarSesion() {
   document.getElementById("mainView").style.display = "none";
   document.getElementById("loginView").style.display = "block";
