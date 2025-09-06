@@ -1,62 +1,99 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #007BFF, #003366);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  padding: 0;
 }
 
-.container {
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e6f0fa;
+  color: #002244;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #003366;
+  color: white;
   text-align: center;
-  padding: 20px;
-  width: 100%;
-  max-width: 700px;
+  padding: 1rem;
 }
 
 .logo {
-  max-width: 160px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  height: 60px;
+  max-width: 100%;
+  margin-bottom: 0.5rem;
 }
 
-h2 {
-  margin-bottom: 20px;
+.login-box, .caja-grande {
+  background: white;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #ccddee;
+  width: 90%;
+  max-width: 1000px;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 1px solid #aaccee;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 button {
-  padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 20px;
-  background-color: #ff4444;
+  background-color: #0055aa;
   color: white;
-  max-width: 500px;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem 0.25rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
   width: 100%;
+}
+
+button:hover {
+  background-color: #0077cc;
 }
 
 footer {
-  margin-top: 30px;
-  font-size: 14px;
-  color: #cccccc;
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
 }
 
-.iframe-box {
-  border: 2px solid white;
-  border-radius: 10px;
+@media (min-width: 600px) {
+  button {
+    width: auto;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+.recuadro-responsive {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 8px;
   overflow: hidden;
-  height: 500px;
-  width: 100%;
-  max-width: 700px;
-  margin: 20px auto;
+  box-shadow: 0 0 12px #ccddee;
 }
 
-iframe {
+.recuadro-responsive iframe {
   width: 100%;
-  height: 100%;
+  height: 70vh;
+  border: none;
+}
+
+.hidden {
+  display: none;
 }
