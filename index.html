@@ -7,36 +7,20 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- LOGIN -->
-  <div class="container" id="loginView">
-    <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" class="logo" alt="Logo Defender Castelli" />
-    <h2>Acceso para medios</h2>
-    <input type="text" id="usuario" placeholder="Usuario" />
-    <input type="password" id="clave" placeholder="Clave" />
-    <button onclick="validar()">Ingresar</button>
-    <div id="error"></div>
-    <footer>Comando Electoral PJ</footer>
-  </div>
-
-  <!-- INICIO -->
-  <div class="container hidden" id="inicioView">
-    <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" class="logo" alt="Logo Defender Castelli" />
-    <h2>Comando Electoral PJ</h2>
-    <button onclick="mostrarMedios()">Habilitado para medios</button>
-    <footer>Comando Electoral PJ</footer>
-  </div>
-
-  <!-- MEDIOS -->
-  <div class="container hidden" id="mediosView">
+  <div class="container">
     <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" class="logo" alt="Logo Defender Castelli" />
     <h2>Comando Electoral PJ</h2>
     <div class="iframe-box">
       <iframe src="https://elecciones.castelli.gob.ar/mesas.php" frameborder="0"></iframe>
     </div>
-    <button onclick="volverInicio()" class="cerrar">Volver</button>
+    <button onclick="volver()" class="cerrar">Volver</button>
     <footer>Comando Electoral PJ</footer>
   </div>
 
-  <script src="main.js"></script>
+  <script>
+    function volver() {
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
 </html>
