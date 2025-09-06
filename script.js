@@ -4,14 +4,10 @@ function validar() {
 
   if (usuario === "medioscastelli" && clave === "medios2025") {
     document.getElementById("loginView").style.display = "none";
-    document.getElementById("mainView").style.display = "block";
+    document.getElementById("mainView").style.display = "flex";
   } else {
     document.getElementById("error").innerText = "Usuario o clave incorrectos.";
   }
-}
-
-function irAMesas() {
-  window.location.href = "https://elecciones.castelli.gob.ar/mesas.php";
 }
 
 function cerrarSesion() {
