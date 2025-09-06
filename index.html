@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Habilitado para Medios</title>
+  <title>Login - Comando Electoral PJ</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-    <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" alt="Logo Defender Castelli" class="logo" />
-    <h2>Comando Electoral PJ</h2>
-    <div class="iframe-box">
-      <iframe src="https://elecciones.castelli.gob.ar/mesas.php" frameborder="0"></iframe>
-    </div>
-    <button onclick="volver()" class="cerrar">Volver</button>
+    <img src="https://raw.githubusercontent.com/MASEDA78/medioscastelli/main/desender.png" class="logo" alt="Logo" />
+    <h2>Acceso para medios</h2>
+    <input type="text" id="usuario" placeholder="Usuario" />
+    <input type="password" id="clave" placeholder="Clave" />
+    <button onclick="validar()">Ingresar</button>
+    <div id="error"></div>
     <footer>Comando Electoral PJ</footer>
   </div>
-  <script src="medios.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
